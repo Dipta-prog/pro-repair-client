@@ -14,7 +14,7 @@ import Footer from '../../Shared/Footer/Footer';
 import SlideBusinessInfo from '../../SlideBusinessInfo/SlideBusinessInfo';
 import ProcessPayment from '../../ProcessPayment/ProcessPayment';
 
-const HomeN = () => {
+const Home = () => {
     return (
         <div>
             <Header></Header>
@@ -33,4 +33,4 @@ const HomeN = () => {
     );
 };
 
-export default HomeN;
+export default Home;

@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyAO7U1991sH7viFi47_4-7K3WKMcpbf41o",
-  authDomain: "fresh-valley-auth.firebaseapp.com",
-  projectId: "fresh-valley-auth",
-  storageBucket: "fresh-valley-auth.appspot.com",
-  messagingSenderId: "202984821990",
-  appId: "1:202984821990:web:87b715a4113f4e4d8f1727"
+  apiKey: "AIzaSyCEUKjIKaPZtzgwwm6C1_rQaUKrDeYnnqc",
+  authDomain: "pro-repair-service.firebaseapp.com",
+  projectId: "pro-repair-service",
+  storageBucket: "pro-repair-service.appspot.com",
+  messagingSenderId: "641644208442",
+  appId: "1:641644208442:web:21628e1155ccb1a57c3003"
 };
   export default firebaseConfig;
   
