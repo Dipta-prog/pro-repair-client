@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Product from '../../Product/Product';
+import Product from '../../ServiceCard/ServiceCard';
 
 const ServiceDetail = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5092/products')
+        fetch('https://arcane-savannah-57391.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

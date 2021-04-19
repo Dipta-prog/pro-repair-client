@@ -5,24 +5,11 @@ import './InfoCard.css';
 
 const InfoCard = ({ info }) => {
     return (
-        // <div className="col-md-4 text-black info-card">
-        //     <div className={`d-flex justify-content-center info-container info-${info.background}`}>
-        //         <div className="mr-3">
-        //             <FontAwesomeIcon className="info-icon" icon={info.icon}></FontAwesomeIcon>
-        //         </div>
-        //         <div>
-        //             <h6>{info.title}</h6>
-        //             <small>{info.description}</small>
-        //         </div>
-        //     </div>
-        // </div>
-
-        <div className=''>
+        <div>
             <div class="col">
                 <div className="card mb-4 shadow item" style={{ borderRadius: '10px' }}>
                     <div className="d-flex text-center" style={{ paddingTop: "20px" }}>
                         <div className="card-img-top">
-                            {/* <img src="" style={{ width: '50%' }} className="card-img-top" alt="Product Img" /> */}
                             <FontAwesomeIcon className="info-icon" icon={info.icon}></FontAwesomeIcon>
                         </div>
                     </div>

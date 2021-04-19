@@ -21,7 +21,6 @@ const ReviewCard = (props) => {
                 </div>
             </div>
         </div>
-// Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iusto qui consectetur incidunt iste error.
     );
 };
 

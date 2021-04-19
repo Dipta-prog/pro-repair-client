@@ -1,8 +1,5 @@
 import React from 'react';
-import './Admin.css'
-import window from '../../all_Images/icons/grid 1.png';
-import pen from '../../all_Images/icons/edit 1.png';
-import plus from '../../all_Images/icons/plus 1.png';
+import './Admin.css';
 import { useState } from 'react';
 import axios from 'axios';
 import ManageProduct from '../ManageProduct/ManageProduct';
@@ -55,7 +52,6 @@ const Admin = () => {
         const imgData = new FormData();
         imgData.set('key', '07e3f5810f445d3150142c8ea40f5780');
         imgData.append('image', event.target.files[0]);
-        // console.log(imgData);
         setFileSelected(false);
 
 
@@ -96,7 +92,7 @@ const Admin = () => {
     const handleAddProduct = (event) => {
         event.preventDefault();
         if (fileSelected) {
-            const url = 'http://localhost:5092/addProduct';
+            const url = 'https://arcane-savannah-57391.herokuapp.com/addProduct';
             fetch(url, {
                 method: 'POST',
                 headers: {

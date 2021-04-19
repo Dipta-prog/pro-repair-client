@@ -3,27 +3,21 @@ import { useContext } from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { UserContext } from '../../App';
-import Navbar from '../Shared/Navbar/Navbar';
 
-const Orders = (props) => {
-    // console.log('output of props from orders',props.hideNavbar);
-    // const [hideNavbar,setHideNavbar]=useState(true);
+const Orders = () => {
     const [loadingSpinner, setLoadingSpinner] = useState(true);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [orderedProducts, setOrderedProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5092/orderedProducts?email=' + loggedInUser.email)
+        fetch('https://arcane-savannah-57391.herokuapp.com/orderedProducts?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => setOrderedProducts(data))
         setLoadingSpinner(false);
     }, []);
 
-    // console.log(orderedProducts);
-    // if(props.hideNavbar===false)setHideNavbar(false);
 
     return (
         <div>
-            {/* <Navbar></Navbar> */}
             {
                 loadingSpinner && <div className="m-5">
                     <div className="d-flex justify-content-center text-primary">
@@ -35,38 +29,6 @@ const Orders = (props) => {
             }
             <div className='container'>
                 <h3 className='mt-3 ml-3'>Previously Bought Services</h3>
-                {/* <table className="container">
-                    <thead>
-                        <tr className="border-bottom">
-                            <th>Product Image</th>
-                            <th>Product Name</th>
-                            <th>Product Price($)</th>
-                            <th>Purchase Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            orderedProducts.map(product => {
-                                return (
-                                    <tr className="border-bottom">
-                                        <td><img src={product.productImg} style={{ width: '93px', height: '93px' }} alt="" /></td>
-                                        <td>{product.productName}</td>
-                                        <td>{product.price}</td>
-                                        <td>{product.date}</td>
-
-
-                                        <td>{product.serviceImg}</td>
-                                        <td>{product.serviceName}</td>
-                                        <td>{product.serviceDescription}</td>
-                                        <td>{product.price}</td>
-                                    </tr>
-                                )
-                            })
-                        }
-                    </tbody>
-                </table> */}
-
-
                 <div className="mt-5 row row-cols-1 row-cols-md-3 g-4">
                     {
                         orderedProducts.map(product => {
@@ -85,8 +47,6 @@ const Orders = (props) => {
                                                     <br />
                                                     <p>{product.serviceDescription}</p>
                                                     <div className="d-flex justify-content-start">
-                                                        {/* <h5 style={{ paddingTop: '18px' }}>${price}</h5> */}
-                                                        {/* <button className="button"></button> */}
                                                         <p className="btn btn-outline-success">{product.orderStatus}</p>
                                                     </div>
                                                 </div>
@@ -101,7 +61,7 @@ const Orders = (props) => {
                 </div >
 
                 {
-                    orderedProducts.length === 0 && <h2 className="d-flex mt-5 justify-content-center text-primary">You have not ordered any products</h2>
+                    orderedProducts.length === 0 && <h2 className="d-flex mt-5 justify-content-center text-primary">You have not ordered any services</h2>
                 }
             </div>
         </div>

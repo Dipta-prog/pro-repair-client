@@ -1,6 +1,6 @@
 import React from 'react';
 import InfoCard from '../InfoCard/InfoCard';
-import { faUserAlt, faLaptopHouse,faHandshake, faComments, faCalendarAlt, faStethoscope, faFunnelDollar, faMapMarker, faCogs } from '@fortawesome/free-solid-svg-icons';
+import { faUserAlt, faLaptopHouse, faHandshake, faComments, faCalendarAlt, faStethoscope, faFunnelDollar, faMapMarker, faCogs } from '@fortawesome/free-solid-svg-icons';
 
 const infosData = [
     {
@@ -16,13 +16,13 @@ const infosData = [
     {
         title: 'Trustworthy See Reviews',
         description: 'Our business has been built on trust and customer satisfaction',
-        icon: faComments,    
-    },  
+        icon: faComments,
+    },
     {
         title: 'Friendly Service',
         description: 'Our technicians are expert as well as friendly',
         icon: faHandshake
-    }, 
+    },
     {
         title: '1 Year Warranty',
         description: 'We are confident about our quality service',
@@ -36,14 +36,6 @@ const infosData = [
 ]
 const BusinessInfo = () => {
     return (
-        // <section className="d-flex justify-content-center">
-        //     <div className="w-75 row mt-5">
-        //         {
-        //             infosData.map(info => <InfoCard info={info} key={info.title}></InfoCard>)
-        //         }
-        //     </div>
-
-        // </section>
 
         <div className="container">
             <div className="text-center mt-5">

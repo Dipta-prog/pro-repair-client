@@ -1,13 +1,12 @@
-.footer-area{
-    /* background-image: url(../../../images/footer-bg.png); */
+.footer-area {
     background-size: cover;
 }
 
-.footer-area li{
+.footer-area li {
     padding-bottom: 10px;
 }
 
-.social-media .icon{
+.social-media .icon {
     height: 40px;
     width: 40px;
     color: #28a745;
@@ -15,23 +14,22 @@
     border: 1px solid #28a745;
     padding: 10px;
 }
-.social-media .active-icon{
-    /* background-color: #28a745 ; */
-    /* color:white; */
-    color:#28a745;
+
+.social-media .active-icon {
+    color: #28a745;
 }
 
-#instaIcon:hover{
+#instaIcon:hover {
     background-color: #28a745;
     Color: white;
 }
 
-#GoogleIcon:hover{
+#GoogleIcon:hover {
     background-color: #28a745;
     Color: white;
 }
 
-#FacebookIcon:hover{
+#FacebookIcon:hover {
     background-color: #28a745;
     Color: white;
 }

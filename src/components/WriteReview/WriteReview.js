@@ -11,7 +11,8 @@ const WriteReview = () => {
         comment: '',
         img: ''
     });
-    // input fields for buy product
+
+    // input fields handle function for write review
     const handleBlur = (event) => {
         if (event.target.name === 'buyer-name') {
             const tempInfo = { ...reviewData };
@@ -61,7 +62,7 @@ const WriteReview = () => {
         if (userImgUploadStatus) {
             console.log('image uploded from condition');
 
-            const url = 'http://localhost:5092/writeReview'; /*Change review route*/
+            const url = 'https://arcane-savannah-57391.herokuapp.com/writeReview';
             fetch(url, {
                 method: 'POST',
                 headers: {
@@ -72,8 +73,6 @@ const WriteReview = () => {
                 .then(res => {
                     console.log('server side response', res.status);
                     if (res.status === 200) {
-                        // history.push("/orders");
-                        // clear input values
                         event.target[0].value = '';
                         event.target[1].value = '';
                         event.target[2].value = '';

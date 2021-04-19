@@ -3,11 +3,9 @@ import React from 'react';
 const SlideBusinessInfo = () => {
     return (
         <div className="container mt-5">
-            {/* <h1>This is Slide Business info</h1> */}
             <div className="section-header">
-                   {/* <h2 className="text-success text-uppercase"></h2> */}
-                   <h2>We Make Your Device Repair <br/> <span className="text-success"> Stress free!</span></h2>
-               </div>
+                <h2>We Make Your Device Repair <br /> <span className="text-success"> Stress free!</span></h2>
+            </div>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -49,7 +47,6 @@ const SlideBusinessInfo = () => {
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-
         </div>
     );
 };

@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <div className="">
             <nav className="navbar sticky-top navbar-expand-lg navbar-light">
-                <Link style={{ fontWeight: '800', fontSize: '25px' }} className="navbar-brand" to='/home'>PRO REPAIR</Link>
+                <Link style={{ fontWeight: '800', fontSize: '30px' }} className="navbar-brand" to='/home'>PRO REPAIR</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -23,13 +23,13 @@ const Navbar = () => {
                             <Link style={{ fontWeight: '600' }} className="nav-link text-primary" to='/home'>Home <span className="sr-only">(current)</span></Link>
                         </li>
                         <li className="nav-item active mx-3">
-                            <Link style={{ fontWeight: '600' }}  className="nav-link text-primary" to='/dashboard'>Dashboard</Link>
+                            <Link style={{ fontWeight: '600' }} className="nav-link text-primary" to='/dashboard'>Dashboard</Link>
                         </li>
                         <li className="nav-item active mx-3">
-                            <Link style={{ fontWeight: '600' }}  className="nav-link text-primary" to='/admin'>Admin</Link>
+                            <Link style={{ fontWeight: '600' }} className="nav-link text-primary" to='/orders'>Orders</Link>
                         </li>
                         <li className="nav-item active mx-3">
-                            <Link style={{ fontWeight: '600' }}  className="nav-link text-primary" to=''>Deals</Link>
+                            <Link style={{ fontWeight: '600' }} className="nav-link text-primary" to='/services' >Services</Link>
                         </li>
                         <li className="nav-item active mx-3">
                             {!(loggedInUser.isSignedIn) && <span type="submit"><Link class="btn btn-outline-success my-sm-0" to='/login'>Login</Link></span>}
