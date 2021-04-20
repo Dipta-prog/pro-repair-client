@@ -71,7 +71,7 @@ const DashBoard = () => {
 
 
     return (
-        <div>
+        <div className="container-fluid">
 
             {!dataVerifyingComplete && <div>
                 <Navbar></Navbar>

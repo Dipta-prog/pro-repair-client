@@ -10,7 +10,7 @@ import SlideBusinessInfo from '../../SlideBusinessInfo/SlideBusinessInfo';
 const Home = () => {
 
     return (
-        <div>
+        <div className="container-fluid">
             <Header></Header>
             <FeaturedService></FeaturedService>
             <Services></Services>

@@ -11,7 +11,7 @@ const Navbar = () => {
     const [loggedInUser] = useContext(UserContext);
 
     return (
-        <div className="">
+        <div>
             <nav className="navbar sticky-top navbar-expand-lg navbar-light">
                 <Link style={{ fontWeight: '800', fontSize: '30px' }} className="navbar-brand" to='/home'>PRO REPAIR</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

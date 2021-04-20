@@ -123,7 +123,7 @@ const Admin = () => {
 
     return (
         <div><Navbar></Navbar>
-            <div className="">
+            <div className="container-fluid">
                 {/* side menu */}
                 <div className="row">
                     <div className="col-md-3 menu-div bg-success">

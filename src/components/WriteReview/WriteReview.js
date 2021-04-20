@@ -93,7 +93,7 @@ const WriteReview = () => {
 
 
     return (
-        <div>
+        <div className="container-fluid">
             <form onSubmit={handleSubmit}>
                 <h3>Review</h3>
                 <div className="card shadow card-width">
@@ -110,7 +110,7 @@ const WriteReview = () => {
 
                             <div className="mt-3 pl-3 pr-3 pb-3">
                                 <h5>Add Your Comment</h5>
-                                <textarea required onBlur={handleBlur} rows="5" cols="50" placeholder="Enter your comment" name="comment"></textarea>
+                                <textarea required onBlur={handleBlur} className="form-control" rows="5" cols="37" placeholder="Enter your comment" name="comment"></textarea>
                             </div>
                         </div>
                     </div>

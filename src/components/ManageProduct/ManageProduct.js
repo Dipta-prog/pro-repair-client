@@ -38,7 +38,7 @@ const ManageProduct = () => {
                 <thead>
                     <tr className="border-bottom">
                         <th>Product Name</th>
-                        <th>Wight</th>
+                        <th>Description</th>
                         <th>Price</th>
                         <th>Action</th>
                     </tr>
@@ -49,7 +49,7 @@ const ManageProduct = () => {
                             return (
                                 <tr id={index} className="border-bottom">
                                     <td>{product.name}</td>
-                                    <td>{product.weight}</td>
+                                    <td>{product.description}</td>
                                     <td>{product.price}</td>
                                     <td><span><img className="btnImg" src={editBtn} alt="" /></span> <span onClick={() => handleDeleteProduct(index, product._id)}><img className="btnImg" src={deleteBtn} alt="" /></span></td>
                                 </tr>
