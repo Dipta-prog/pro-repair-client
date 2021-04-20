@@ -32,7 +32,7 @@ const BuyService = () => {
         serviceDescription: '',
         price: '',
         serviceImg: '',
-        orderStatus: 'pending',
+        orderStatus: 'Pending',
         quantity: '1',
         paymentInfo: null
     });
@@ -128,7 +128,7 @@ const BuyService = () => {
                             serviceDescription: '',
                             price: '',
                             serviceImg: '',
-                            orderStatus: 'pending',
+                            orderStatus: 'Pending',
                             quantity: '1',
                             paymentInfo: null
                         });

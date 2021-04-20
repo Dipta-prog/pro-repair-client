@@ -15,6 +15,11 @@ const Orders = () => {
         setLoadingSpinner(false);
     }, []);
 
+    const handleClass = (id) => {
+        console.log(id)
+        // console.log(document.getElementById(id));
+    }
+
 
     return (
         <div>
@@ -34,6 +39,7 @@ const Orders = () => {
                         orderedProducts.map(product => {
                             return (
                                 <div className="col-md-4">
+                                    {/* {console.log(product.orderStatus)} */}
                                     <div class="col">
                                         <div className="card mb-4 shadow" style={{ borderRadius: '10px' }}>
                                             <div className="d-flex text-center" style={{ paddingTop: "20px" }}>
@@ -47,7 +53,7 @@ const Orders = () => {
                                                     <br />
                                                     <p>{product.serviceDescription}</p>
                                                     <div className="d-flex justify-content-start">
-                                                        <p className="btn btn-outline-success">{product.orderStatus}</p>
+                                                        <p id={product._id} className={`btn btn-outline-${product.orderStatus === "Pending" ? "danger" : product.orderStatus === "On going" ? "warning" : product.orderStatus === "Done" ? "success" : ""}`}>{product.orderStatus}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -64,6 +70,7 @@ const Orders = () => {
                     orderedProducts.length === 0 && <h2 className="d-flex mt-5 justify-content-center text-primary">You have not ordered any services</h2>
                 }
             </div>
+
         </div>
     );
 };

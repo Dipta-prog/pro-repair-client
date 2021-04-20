@@ -8,7 +8,22 @@ const AllOrders = () => {
             .then(data => setProducts(data))
     }, []);
 
-    console.log(products);
+    const handleChange = (id) => {
+        const updatedOrderStatus = document.getElementById(id).value;
+        const obj = {updatedOrderStatus};
+        console.log(document.getElementById(id).value);
+        fetch(`https://arcane-savannah-57391.herokuapp.com/update/${id}`,{
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json'},
+            body: JSON.stringify(obj)
+        })
+        .then(res => res.json())
+        .then(data=>{
+            console.log('updated',data);
+        })
+    }
+
+    // console.log(products[0]._id);
     return (
         <div>
             <h3 className="mb-2 ml-2">Order List</h3>
@@ -32,7 +47,14 @@ const AllOrders = () => {
                                         <td>{product.buyerEmail}</td>
                                         <td>{product.serviceName}</td>
                                         <td>{product.paymentMethod}</td>
-                                        <td>{product.orderStatus}</td>
+                                        <td>
+                                            <select id={product._id} onChange={()=>handleChange(product._id)}>
+                                                <option value="" selected disabled hidden>{product.orderStatus}</option>
+                                                <option value="Pending">Pending</option>
+                                                <option value="On going">On going</option>
+                                                <option value="Done">Done</option>
+                                            </select>
+                                        </td>
                                     </tr>
                                 )
                             })
@@ -40,6 +62,12 @@ const AllOrders = () => {
                     </tbody>
                 </table>
             </div>
+            {/* <select onChange={handleChange}>
+                <option value="" selected disabled hidden>Choose here</option>
+                <option value="Pending">Pending</option>
+                <option value="On going">On going</option>
+                <option value="Done">Done</option>
+            </select> */}
         </div>
     );
 };
